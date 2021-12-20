@@ -2,7 +2,7 @@ name: Test Action
 on: workflow_dispatch
 jobs:
   my-job:
-    runs-on: windows-latest
+    runs-on: windows-2022
     name: DevOps Test
     steps:
       - name: Download required things
