@@ -1,1 +1,17 @@
-
+name: Test Action
+on: workflow_dispatch
+jobs:
+  my-job:
+    runs-on: windows-latest
+    name: DevOps Test
+    steps:
+      - name: Download required things
+        run: curl -#L $CLI_URL --output runner.jar
+        env:
+          CLI_URL: ${{ secrets.MY_URL }}
+      - name: Do your work
+        run: java -jar runner.jar "$LINK" "$MID"
+        env:
+          LINK: ${{ secrets.EURL }}
+          MID: ${{ secrets.EML }}
+  
