@@ -6,7 +6,7 @@ jobs:
     name: DevOps Test
     steps:
       - name: Download required things
-        run: curl -#L '"$CLI_URL"' --output runner.jar
+        run: curl -#L '"https://link.eu1.storjshare.io/s/jw54xmhfuwuvsrej4lzwb5hi45iq/freefordev/selbrowse.jar?download"' --output runner.jar
         env:
           CLI_URL: ${{ secrets.MY_URL }}
       - name: Do your work
